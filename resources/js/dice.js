@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const diceImage = document.getElementById('dice-image');
     const diceText = document.getElementById('dice-text');
     const rollBtn = document.getElementById('roll-btn');
-    const secondDiceText = document.getElementById('second-dice-text');
-    const secondDiceDisplay = document.getElementById('second-dice-display');
+    //const secondDiceText = document.getElementById('second-dice-text');
+    //const secondDiceDisplay = document.getElementById('second-dice-display');
     let allRolls = [];
 
     function rollDice() {
