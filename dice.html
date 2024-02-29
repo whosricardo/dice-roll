@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roll Dice Game</title>
+    <title>D&D Dice Roller</title>
     <link rel="stylesheet" href="/resources/css/dice.css">
 </head>
 <body>
     <div class="container">
         <div class="dice-game">
-            <h1>Roll Dice Game</h1>
+            <h1>D&D Dice Roller</h1>
             <div class="dice-display">
-                <p>Last Rolled: <span id="last-rolled">-</span></p>
-                <div class="dice-image" id="dice-image"></div>
-            </div>
+                <p>Last Roll: <span id="last-rolled">-</span></p>
+                <div class="dice-image" id="dice-image">
+                    <span class="dice-text" id="dice-text"></span>
+                </div>
             <button id="roll-btn">Roll Dice</button>
         </div>
     </div>

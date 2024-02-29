@@ -1,6 +1,11 @@
-body, html {
-    height: 100%;
+body {
     margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/resources/images/backgroundD&D2.png'); /* Adicione a URL da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,11 +16,14 @@ body, html {
 }
 
 .dice-game {
-    border: 2px solid #333;
+    border: 2px solid #fff;
     padding: 20px;
     border-radius: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url(/resources/images/backgroundD&D.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo semitransparente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .dice-display {
@@ -24,6 +32,7 @@ body, html {
 
 .dice-display p {
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .dice-display p span {
@@ -31,16 +40,39 @@ body, html {
     color: blue;
 }
 
+.dice-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    pointer-events: none;
+}
+
 .dice-image {
+    position: relative;
     width: 100px;
     height: 100px;
     border: 1px solid #333;
+    border-radius: 5px;
     margin: 0 auto;
     margin-top: 10px;
     background-color: white;
-    background-image: url(''); /* Empty initially */
+    background-image: url(''); /* Vazio inicialmente */
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.advantage-section {
+    margin-bottom: 10px;
+}
+
+.special-roll {
+    font-size: 18px;
+    font-style: italic;
 }
 
 button {
@@ -51,9 +83,55 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 5px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Estilo para o checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background-color: #007bff;
+}
+
+input[type="checkbox"] + label:after {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 10px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    vertical-align: middle;
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
 }

@@ -1,25 +1,24 @@
-document.addEventListener(`DOMContentLoaded`, function() {
-    const lastRolled = document.getElementById("last-rolled");
-    const diceImage = document.getElementById("dice-image");
-    const rollBtn = document.getElementById("roll-btn");
+document.addEventListener('DOMContentLoaded', function() {
+    const lastRolled = document.getElementById('last-rolled');
+    const diceImage = document.getElementById('dice-image');
+    const diceText = document.getElementById('dice-text');
+    const rollBtn = document.getElementById('roll-btn');
+    const secondDiceText = document.getElementById('second-dice-text');
+    const secondDiceDisplay = document.getElementById('second-dice-display');
     let allRolls = [];
-    let diceMap = {
-        1: '../resources/images/dice1.png',
-        2: '../resources/images/dice2.png',
-        3: '../resources/images/dice3.png',
-        4: '../resources/images/dice4.png',
-        5: '../resources/images/dice5.png',
-        6: '../resources/images/dice6.png'
-    };
 
     function rollDice() {
-        const result = Math.floor(Math.random() * 6) + 1;
+        console.log('User pressed the roll dice button');
+
+        const result = Math.floor(Math.random() * 20) + 1;
 
         allRolls.push(result);
 
         lastRolled.textContent = allRolls;
+        diceText.textContent = result;
 
-        diceImage.style.backgroundImage = `url(${diceMap[result]})`;
+        const diceImagePath = 'resources/images/d20.png';
+        diceImage.style.backgroundImage = `url(${diceImagePath})`;
     }
 
     rollBtn.onclick = function() {
