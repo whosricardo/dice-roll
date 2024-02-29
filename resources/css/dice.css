@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.dice-game {
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dice-display {
+    margin-bottom: 20px;
+}
+
+.dice-display p {
+    font-size: 18px;
+}
+
+.dice-display p span {
+    font-weight: bold;
+    color: blue;
+}
+
+.dice-image {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: white;
+    background-image: url(''); /* Empty initially */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
